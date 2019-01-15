@@ -17,7 +17,7 @@ Then run the following command:
 
 **Trying the app out**
 
-When a new config is saved, then it is pushed to Queue and at the listener it can be observed it is catched 
+When a new config object is saved, then it is pushed to queue. At the listener component, created config dto is logged 
 
 
 
