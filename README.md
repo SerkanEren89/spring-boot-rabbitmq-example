@@ -1,16 +1,15 @@
-# spring-boot-elastic-search-example
+# spring-boot-rabbitmq-example
 
-This project is an example spring boot and dockerized Elasticsearch instance.
+This project is an example spring boot and dockerized rabbit mq instance.
 
 **Configuration**
 * Spring-Boot is running at localhost:8081
-* Elasticsearch is running at localhost:9200, but receives direct communication from Spring via 9300
 
 **Starting the app**
 
-`$ docker-compose up -d`
+`$ docker-compose -f docker-compose-rabbitmq.yml up -d`
 
-`Starting elasticsearch_elasticsearch_1 ... done`
+`Starting rabbitmq ... done`
 
 Then run the following command:
 
@@ -18,10 +17,9 @@ Then run the following command:
 
 **Trying the app out**
 
-You can post the sample data at book.json.
-You can get sample books with the following example. Query is done according to title, author and description attribute.
+When a new config is saved, then it is pushed to Queue and at the listener it can be observed it is catched 
 
-`http://localhost:8081/books?searchTerm=JavaScript`
+
 
 
 
