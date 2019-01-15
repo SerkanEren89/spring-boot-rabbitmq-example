@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: RabbitmqExampleService
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password: sa
+    platform: H2
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles: int
+
+---
+spring:
+  profiles: uat
+
+---
+spring:
+  profiles: prod
